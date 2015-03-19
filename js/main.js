@@ -314,7 +314,7 @@ var jump;
 	 lost = game.add.text(game.world.centerX, game.world.centerY, "You have returned \n the lost cellphone!", style);
             lost.anchor.setTo( 0.5, 0.5);
 
-			hos.animations.add('stop', [15], 10, true);
+			hos.animations.add('stop', [16], 10, true);
 	
 	  hos.animations.play('stop');
 	  
@@ -347,9 +347,9 @@ var jump;
 	
 	  
     
-    function birdzHandler(player, birdz)
+    function birdzHandler(player, birdzs)
     {
-        birdz.kill();
+        birdzs.kill();
         birdzfx.play();
  
         
@@ -389,7 +389,7 @@ function collisionHandler (bullet, birdzs) {
     //  When a bullet hits an alien we kill them both
     bullet.kill();
     birdzs.kill();
-
+     birdzfx.play();
     //  Increase the score
    
     //  And create an explosion :)
